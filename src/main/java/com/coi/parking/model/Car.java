@@ -20,4 +20,32 @@ public class Car {
 
     @Column(name="owner_phone_number")
     private String ownerPhoneNumber;
+
+    public Integer getCarId() {
+        return carId;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getOwnerFIO() {
+        return ownerFIO;
+    }
+
+    public void setOwnerFIO(String ownerFIO) {
+        this.ownerFIO = ownerFIO;
+    }
+
+    public String getOwnerPhoneNumber() {
+        return ownerPhoneNumber;
+    }
+
+    public void setOwnerPhoneNumber(String ownerPhoneNumber) {
+        this.ownerPhoneNumber = ownerPhoneNumber;
+    }
 }

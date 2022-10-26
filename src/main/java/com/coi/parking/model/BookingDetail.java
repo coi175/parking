@@ -16,4 +16,24 @@ public class BookingDetail {
 
     @Column(name="price")
     private Integer price;
+
+    public Integer getBookingDetailId() {
+        return bookingDetailId;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
 }
