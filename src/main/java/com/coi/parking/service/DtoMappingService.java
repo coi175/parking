@@ -8,7 +8,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DtoMappingService {
-    public ParkingDto mapToParkingDto(ParkingPlace parkingPlace, Car car, BookingDetail bookingDetail) {
+    public ParkingDto mapToParkingDto(ParkingPlace parkingPlace) {
+        Car car = parkingPlace.getCar();
+        BookingDetail bookingDetail = parkingPlace.getBookingDetail();
+
         ParkingDto parkingDto = new ParkingDto();
         parkingDto.setPlaceNumber(parkingPlace.getPlaceNumber());
 

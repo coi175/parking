@@ -1,5 +1,8 @@
 package com.coi.parking.dto;
 
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class ParkingDto {
@@ -11,7 +14,7 @@ public class ParkingDto {
 
     private String ownerPhoneNumber;
 
-    private Date endTime;
+    private LocalDateTime endTime;
 
     private Integer price;
 
@@ -47,11 +50,11 @@ public class ParkingDto {
         this.ownerPhoneNumber = ownerPhoneNumber;
     }
 
-    public Date getEndTime() {
+    public LocalDateTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
     }
 

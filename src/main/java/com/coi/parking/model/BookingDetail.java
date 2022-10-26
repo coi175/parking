@@ -1,6 +1,7 @@
 package com.coi.parking.model;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -10,9 +11,8 @@ public class BookingDetail {
     @Column(name="booking_detail_id")
     private Integer bookingDetailId;
 
-    @Temporal(TemporalType.TIMESTAMP)
     @Column(name="end_time")
-    private Date endTime;
+    private LocalDateTime endTime;
 
     @Column(name="price")
     private Integer price;
@@ -21,11 +21,11 @@ public class BookingDetail {
         return bookingDetailId;
     }
 
-    public Date getEndTime() {
+    public LocalDateTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
     }
 
