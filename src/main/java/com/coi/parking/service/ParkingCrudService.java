@@ -41,12 +41,8 @@ public class ParkingCrudService implements CrudService {
     @Override
     public void save(ParkingDto parkingDto) {
         ParkingPlace parkingPlace = new ParkingPlace();
-        Car car = new Car();
-        BookingDetail bookingDetail = new BookingDetail();
 
-        dtoMappingService.mapToEntities(parkingDto, parkingPlace, car, bookingDetail);
-        parkingPlace.setCar(car);
-        parkingPlace.setBookingDetail(bookingDetail);
+        dtoMappingService.mapToEntities(parkingDto, parkingPlace);
 
         parkingPlaceRepository.saveAndFlush(parkingPlace);
     }

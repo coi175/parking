@@ -25,8 +25,10 @@ public class DtoMappingService {
         return parkingDto;
     }
 
-    public void mapToEntities(ParkingDto parkingDto, ParkingPlace parkingPlace, Car car, BookingDetail bookingDetail) {
+    public void mapToEntities(ParkingDto parkingDto, ParkingPlace parkingPlace) {
         parkingPlace.setPlaceNumber(parkingDto.getPlaceNumber());
+        Car car = new Car();
+        BookingDetail bookingDetail = new BookingDetail();
 
         car.setNumber(parkingDto.getCarNumber());
         car.setOwnerFIO(parkingDto.getOwnerFIO());
@@ -34,5 +36,8 @@ public class DtoMappingService {
 
         bookingDetail.setEndTime(parkingDto.getEndTime());
         bookingDetail.setPrice(parkingDto.getPrice());
+
+        parkingPlace.setCar(car);
+        parkingPlace.setBookingDetail(bookingDetail);
     }
 }

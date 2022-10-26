@@ -7,7 +7,7 @@ import java.util.Date;
 @Entity
 public class BookingDetail {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="booking_detail_id")
     private Integer bookingDetailId;
 

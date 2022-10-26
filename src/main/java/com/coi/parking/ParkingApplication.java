@@ -10,7 +10,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 @SpringBootApplication
-@EnableWebMvc // for swagger
+@EnableWebMvc
 public class ParkingApplication {
 	@Bean
 	public Docket api() {
