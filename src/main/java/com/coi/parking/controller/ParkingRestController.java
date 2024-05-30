@@ -35,8 +35,9 @@ public class ParkingRestController {
     public ResponseEntity<?> createParkingPlace(@RequestBody ParkingDto parkingDto) {
         ParkingDto temp = crudService.find(parkingDto.getPlaceNumber());
         if (temp != null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This parking place number already exist in database");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This parking CHANGED HERE number already exist in database");
         }
+        System.out.println("I ZDES");
         crudService.save(parkingDto);
         return ResponseEntity.ok().body(parkingDto.getPlaceNumber());
     }
