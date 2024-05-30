@@ -37,7 +37,7 @@ public class ParkingRestController {
         if (temp != null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This parking CHANGED HERE number already exist in database");
         }
-        System.out.println("TEPER NE ZDES");
+        System.out.println("TEPER NE ZDES2222");
         crudService.save(parkingDto);
         return ResponseEntity.ok().body(parkingDto.getPlaceNumber());
     }
